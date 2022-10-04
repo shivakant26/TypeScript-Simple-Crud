@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Home } from './Component/home';
+import { Profile } from './Component/profile';
+import { Welcome } from './Component/welcome';
+
 
 function App() {
+    
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Home />
+     {/* <Welcome name="puspa"/> */}
+     {/* <Profile title="profile Component" lang="typescript" status='single'/> */}
+     <span style={{color:"green"}}>salary : 5ctc</span>
     </div>
   );
 }
