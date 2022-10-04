@@ -38,5 +38,33 @@
 }
 .form-field{
   margin-bottom: 15px;
+  position: relative;
 
+}
+.error{
+  color: red;
+    position: absolute;
+    top: 8px;
+    left: 102px;
+    font-size: 13px;
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.div-col{
+  float: left;
+  width: 30%;
+  margin: 15px;
+}
+table{
+  width: 100%;
 }

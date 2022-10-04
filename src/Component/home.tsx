@@ -24,7 +24,7 @@ export const Home: React.FC = () => {
   const [abc , setAbc] = useState<any>(false);
   const submitval = () => {
     if(state.id){
-      list.splice(state.id,1,state)
+      list.splice(state.id-1,1,state)
     }else{
       setList([...list,state]);
     }
@@ -35,7 +35,7 @@ export const Home: React.FC = () => {
   };
   const Edit = (id:any) =>{
     var result = list;
-    var current_obj = result[id]
+    var current_obj = result[id-1]
     setState({
       title:current_obj.title,
       discription:current_obj.discription,
@@ -45,7 +45,7 @@ export const Home: React.FC = () => {
 
   const Delete = (id:any) =>{
    var arry = list;
-   list.splice(id,1);
+   list.splice(id-1,1);
    setList(arry)
    setAbc(!abc)
   }
@@ -95,12 +95,12 @@ export const Home: React.FC = () => {
             {list?.map((item: any, id: any) => {
               return (
                 <tr key={id}>
-                  <td>{id}</td>
+                  <td>{id+1}</td>
                   <td>{item.title}</td>
                   <td>{item.discription}</td>
                   <td>
-                    <button onClick={()=>Edit(id)}>Edit()</button>
-                    <button onClick={()=>Delete(id)}>Delete</button>
+                    <button onClick={()=>Edit(id+1)}>Edit()</button>
+                    <button onClick={()=>Delete(id+1)}>Delete</button>
                   </td>
                 </tr>
               );
